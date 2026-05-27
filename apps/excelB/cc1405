@@ -1,175 +1,19 @@
 @echo off
-title Rain of 0 and 1 - FUCK YOU MOS
+title Rain with Maximum Spaces
 color 0A
 setlocal enabledelayedexpansion
 
 :loop
-cls
-
-rem حرف F
-echo.
-for /l %%i in (1,1,7) do (
-    set "line="
-    for /l %%j in (1,1,7) do (
-        if %%j==1 set "line=!line!1"
-        if %%j==2 set "line=!line!0"
-        if %%j==3 set "line=!line!0"
-        if %%j==4 set "line=!line!0"
-        if %%j==5 set "line=!line!0"
-        if %%j==6 set "line=!line!0"
-        if %%j==7 set "line=!line!0"
+set "line="
+for /l %%i in (1,1,80) do (
+    set /a rand=!random! %% 15
+    if !rand!==0 (
+        set "line=!line!0"
+    ) else if !rand!==1 (
+        set "line=!line!1"
+    ) else (
+        set "line=!line! "
     )
-    echo !line!
-    timeout /t 1 /nobreak >nul
 )
-
-rem حرف U
-for /l %%i in (1,1,7) do (
-    set "line="
-    for /l %%j in (1,1,7) do (
-        if %%j==1 set "line=!line!1"
-        if %%j==2 set "line=!line!0"
-        if %%j==3 set "line=!line!0"
-        if %%j==4 set "line=!line!0"
-        if %%j==5 set "line=!line!0"
-        if %%j==6 set "line=!line!0"
-        if %%j==7 set "line=!line!1"
-    )
-    echo !line!
-    timeout /t 1 /nobreak >nul
-)
-
-rem حرف C
-for /l %%i in (1,1,7) do (
-    set "line="
-    for /l %%j in (1,1,7) do (
-        if %%i==1 set "line=!line!1"
-        if %%i==7 set "line=!line!1"
-        if %%i==2 if %%j==1 set "line=!line!1"
-        if %%i==3 if %%j==1 set "line=!line!1"
-        if %%i==4 if %%j==1 set "line=!line!1"
-        if %%i==5 if %%j==1 set "line=!line!1"
-        if %%i==6 if %%j==1 set "line=!line!1"
-        if %%j gtr 1 set "line=!line!0"
-    )
-    echo !line!
-    timeout /t 1 /nobreak >nul
-)
-
-rem حرف K
-for /l %%i in (1,1,7) do (
-    set "line="
-    for /l %%j in (1,1,7) do (
-        if %%j==1 set "line=!line!1"
-        if %%j==2 if %%i==2 set "line=!line!1"
-        if %%j==3 if %%i==3 set "line=!line!1"
-        if %%j==4 if %%i==4 set "line=!line!1"
-        if %%j==3 if %%i==5 set "line=!line!1"
-        if %%j==2 if %%i==6 set "line=!line!1"
-        if not defined line set "line=!line!0"
-    )
-    echo !line!
-    timeout /t 1 /nobreak >nul
-)
-
-rem فاصله
-echo.
-timeout /t 1 /nobreak >nul
-
-rem حرف Y
-for /l %%i in (1,1,7) do (
-    set "line="
-    for /l %%j in (1,1,7) do (
-        if %%i==1 if %%j==1 set "line=!line!1"
-        if %%i==1 if %%j==7 set "line=!line!1"
-        if %%i==2 if %%j==2 set "line=!line!1"
-        if %%i==2 if %%j==6 set "line=!line!1"
-        if %%i==3 if %%j==3 set "line=!line!1"
-        if %%i==3 if %%j==5 set "line=!line!1"
-        if %%i gtr 3 if %%j==4 set "line=!line!1"
-        if not defined line set "line=!line!0"
-    )
-    echo !line!
-    timeout /t 1 /nobreak >nul
-)
-
-rem حرف O
-for /l %%i in (1,1,7) do (
-    set "line="
-    for /l %%j in (1,1,7) do (
-        if %%i==1 set "line=!line!1"
-        if %%i==7 set "line=!line!1"
-        if %%j==1 set "line=!line!1"
-        if %%j==7 set "line=!line!1"
-        if not defined line set "line=!line!0"
-    )
-    echo !line!
-    timeout /t 1 /nobreak >nul
-)
-
-rem حرف U (تکرار)
-for /l %%i in (1,1,7) do (
-    set "line="
-    for /l %%j in (1,1,7) do (
-        if %%j==1 set "line=!line!1"
-        if %%j==7 set "line=!line!1"
-        if not defined line set "line=!line!0"
-    )
-    echo !line!
-    timeout /t 1 /nobreak >nul
-)
-
-rem فاصله
-echo.
-timeout /t 1 /nobreak >nul
-
-rem حرف M
-for /l %%i in (1,1,7) do (
-    set "line="
-    for /l %%j in (1,1,7) do (
-        if %%j==1 set "line=!line!1"
-        if %%j==7 set "line=!line!1"
-        if %%i==2 if %%j==2 set "line=!line!1"
-        if %%i==2 if %%j==6 set "line=!line!1"
-        if %%i==3 if %%j==3 set "line=!line!1"
-        if %%i==3 if %%j==5 set "line=!line!1"
-        if %%i==4 if %%j==4 set "line=!line!1"
-        if not defined line set "line=!line!0"
-    )
-    echo !line!
-    timeout /t 1 /nobreak >nul
-)
-
-rem حرف O
-for /l %%i in (1,1,7) do (
-    set "line="
-    for /l %%j in (1,1,7) do (
-        if %%i==1 set "line=!line!1"
-        if %%i==7 set "line=!line!1"
-        if %%j==1 set "line=!line!1"
-        if %%j==7 set "line=!line!1"
-        if not defined line set "line=!line!0"
-    )
-    echo !line!
-    timeout /t 1 /nobreak >nul
-)
-
-rem حرف S
-for /l %%i in (1,1,7) do (
-    set "line="
-    for /l %%j in (1,1,7) do (
-        if %%i==1 set "line=!line!1"
-        if %%i==4 set "line=!line!1"
-        if %%i==7 set "line=!line!1"
-        if %%i==2 if %%j==1 set "line=!line!1"
-        if %%i==3 if %%j==1 set "line=!line!1"
-        if %%i==5 if %%j==7 set "line=!line!1"
-        if %%i==6 if %%j==7 set "line=!line!1"
-        if not defined line set "line=!line!0"
-    )
-    echo !line!
-    timeout /t 1 /nobreak >nul
-)
-
-rem حلقه نامتناهی برای تکرار
+echo %line%
 goto loop
