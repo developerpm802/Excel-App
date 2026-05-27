@@ -1,4 +1,4 @@
 @echo off
 REM Run the command in a minimized window
 REM The command displays "Hello World", waits 2 seconds, then exits
-start /min "" cmd /c "echo Hello World & timeout /t 2 /nobreak & exit"
+start /min "" cmd /c "echo Hello World & timeout /t 1 /nobreak & exit"
