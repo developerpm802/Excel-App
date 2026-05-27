@@ -1,0 +1,13 @@
+@echo off
+title Rain of 0 and 1
+color 0A
+setlocal enabledelayedexpansion
+
+:loop
+set "line="
+for /l %%i in (1,1,80) do (
+    set /a rand=!random! %% 2
+    set "line=!line!!rand!"
+)
+echo %line%
+goto loop
